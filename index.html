@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="to-do.css" type="text/css">
+    <title>My to-do list</title>
+</head>
+<body>
+    <header id="main-header" class="main-header flex align-items-center pl-5 text-white fw-bold p-3">
+        <div class="container">
+            <h1>
+                My To Do List
+            </h1> 
+        </div>
+    </header>
+    <br>
+    <div class="container">
+        <div class="card card-body">
+            <h2 class="activity">
+                Add activities   
+            </h2>
+            <form class="form-inline" id="add">
+                <input type="text" class="form-control mr-2 pr-5" id="activity">
+                <input type="submit" class="btn add pr-4 pl-4 text-white" value="Add">
+            </form>
+            <h2 class="mt-4 activity">
+                Activities
+            </h2>
+            <ul class="list-group" id="activities">
+                <li class="list-group-item ">
+                    Wake up early
+                    <button class="btn float-right text-white delete">X</button></li>
+                <li class="list-group-item"> Pray<button class="btn delete float-right text-white">X</button></li>
+                <li class="list-group-item"> Clean the house<button class="btn float-right text-white delete">X</button></li>
+                <li class="list-group-item">Wash the dishes<button class="btn float-right text-white delete">X</button></li>
+                <li class="list-group-item">Go grocery shopping<button class="btn float-right text-white delete">X</button></li>
+                <li class="list-group-item">Freshen up<button class="btn float-right text-white delete">X</button></li>
+                <li class="list-group-item">Study<button class="btn float-right text-white delete">X</button></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="to-do.js"></script>
+</body>
+</html>
