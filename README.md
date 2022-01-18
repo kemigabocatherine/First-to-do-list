@@ -38,4 +38,4 @@ Twitter: [@twitterhandle](https://twitter.com/catherinek205)
 
 ## Show your support
 
-Give a :+1: or a :star: if you like this project!
+Give a :+1: or a :star2: if you like this project!
