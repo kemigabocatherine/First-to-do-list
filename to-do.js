@@ -1,6 +1,7 @@
 var form = document.getElementById('add');
 var activityList = document.getElementById('activities');
 
+
 // Add activity event
 form.addEventListener('submit', addActivity);
 // Delete event
@@ -16,6 +17,15 @@ function addActivity(e){
     var li = document.createElement('li');
     // Add class
     li.className = 'list-group-item';
+
+    // create checkbox
+    var check = document.createElement('input');
+
+    check.type = 'checkbox';
+    check.style.marginRight = '7px';
+
+    li.appendChild(check);
+
     // Add new input to li
     li.appendChild(document.createTextNode(newActivity));
     
@@ -28,6 +38,7 @@ function addActivity(e){
 
     // Append button to li
     li.appendChild(deletebtn);
+
 
     // Append li to the activities
     activityList.appendChild(li);
@@ -42,3 +53,27 @@ function removeActivity(e){
         }
     }
 }
+
+
+  // create checkbox element
+  // var checkbox = document.createElement('input');
+
+  // // assigning attributes to checkbox
+  // checkbox.type = "checkbox";
+  // checkbox.name = "name";
+  // checkbox.value = "value";
+  // checkbox.id = "id";
+
+  // // creating label for checkbox
+  // var label = document.createElement('label');
+
+  // // Add styles to it
+  // checkbox.style.display = 'flex';
+  // checkbox.style.float = 'left';
+  // checkbox.style.marginTop = '8px';
+  // checkbox.style.marginRight = '6px';
+
+  // const target = document.querySelector('.list');  
+  // target.parentNode.insertBefore(checkbox, target);
+
+  
