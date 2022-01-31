@@ -1,6 +1,6 @@
 var form = document.getElementById('add');
 var activityList = document.getElementById('activities');
-var lists = document.querySelectorAll('.list-group-item');
+var lists = document.querySelector('.list-group-item');
 //var box = document.querySelectorAll('.checkbox');
 console.log(lists);
 
@@ -78,14 +78,14 @@ var step = document.querySelector('#sub');
 //     step.style.display = 'none';
 // }
 lists.addEventListener('mouseover', displaySteps); 
-lists.forEach(function displaySteps(e){
+function displaySteps(e){
   step.style.display = 'block';
   step.style.fontStyle = 'italic';
   step.style.fontSize = '80%';
   step.style.textDecoration = 'none';
   step.style.color = 'blue';
   step.style.marginLeft = '10%'
-});
+};
 
 // const divs = document.querySelectorAll('.sub');
 // console.log(divs);
