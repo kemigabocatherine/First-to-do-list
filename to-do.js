@@ -1,11 +1,18 @@
 var form = document.getElementById('add');
 var activityList = document.getElementById('activities');
+var lists = document.querySelectorAll('.list-group-item');
+//var box = document.querySelectorAll('.checkbox');
+console.log(lists);
 
 
 // Add activity event
 form.addEventListener('submit', addActivity);
 // Delete event
 activityList.addEventListener('click', removeActivity);
+// activity event
+
+
+//lists.addEventListener('mouseout', removeSteps);
 
 // Add activity
 function addActivity(e){
@@ -22,6 +29,7 @@ function addActivity(e){
     var check = document.createElement('input');
 
     check.type = 'checkbox';
+    check.className = 'checkbox';
     check.style.marginRight = '7px';
 
     li.appendChild(check);
@@ -54,26 +62,70 @@ function removeActivity(e){
     }
 }
 
+// sub-lists 
+var step = document.querySelector('#sub');
+// function displaySteps(e) {
+//   step.style.display = 'block';
+//   step.style.fontStyle = 'italic';
+//   step.style.fontSize = '80%';
+//   step.style.textDecoration = 'none';
+//   step.style.color = 'blue';
+//   step.style.marginLeft = '10%'
 
-  // create checkbox element
-  // var checkbox = document.createElement('input');
+// }
 
-  // // assigning attributes to checkbox
-  // checkbox.type = "checkbox";
-  // checkbox.name = "name";
-  // checkbox.value = "value";
-  // checkbox.id = "id";
+// function removeSteps(e) {
+//     step.style.display = 'none';
+// }
+lists.addEventListener('mouseover', displaySteps); 
+lists.forEach(function displaySteps(e){
+  step.style.display = 'block';
+  step.style.fontStyle = 'italic';
+  step.style.fontSize = '80%';
+  step.style.textDecoration = 'none';
+  step.style.color = 'blue';
+  step.style.marginLeft = '10%'
+});
 
-  // // creating label for checkbox
-  // var label = document.createElement('label');
+// const divs = document.querySelectorAll('.sub');
+// console.log(divs);
 
-  // // Add styles to it
-  // checkbox.style.display = 'flex';
-  // checkbox.style.float = 'left';
-  // checkbox.style.marginTop = '8px';
-  // checkbox.style.marginRight = '6px';
+// divs.forEach(function displaySteps(e) {
+//     divs.addEventListener('mouseenter', displaySteps);
+//     divs.style.backgroungColor = 'red';
+// });
 
-  // const target = document.querySelector('.list');  
-  // target.parentNode.insertBefore(checkbox, target);
+// function checked(e) {
+//     if(e.target.classList.contains('list-group-item')) {
+//         style.backgroundColor = 'red';
+//     }
+// }
 
-  
+// function checkMe() {
+//     var checkBoxes = document.getElementsByClassName("checkbox");
+//     var text = document.getElementsByClassName("list-group-item");
+//     console.log(check);
+//     checkBoxes.forEach(function(checkbox) {
+//         console.log(checkBoxes);
+//     })
+
+//     // console.log(text);
+// //     check.forEach(checkbox => {
+// //         if(checkbox.checked===true){
+// //             text.style.backgroundColor="bisque";
+// //         }else {
+// //             text.style.backgroundColor = "white";
+// //         }
+// //     })
+// //     check.forEach(function(checkbox){
+// //         if(checkbox.checked==true){
+// //             text.style.backgroundColor="bisque";
+// //         }else {
+// //             text.style.backgroundColor = "white";
+// //         }
+//     };
+
+//     checkMe(); 
+
+
+    
