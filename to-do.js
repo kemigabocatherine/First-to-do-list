@@ -63,7 +63,7 @@ function removeActivity(e){
 }
 
 // sub-lists 
-var step = document.querySelector('#sub');
+// var step = document.querySelector('#sub');
 // function displaySteps(e) {
 //   step.style.display = 'block';
 //   step.style.fontStyle = 'italic';
@@ -77,15 +77,15 @@ var step = document.querySelector('#sub');
 // function removeSteps(e) {
 //     step.style.display = 'none';
 // }
-lists.addEventListener('mouseover', displaySteps); 
-function displaySteps(e){
-  step.style.display = 'block';
-  step.style.fontStyle = 'italic';
-  step.style.fontSize = '80%';
-  step.style.textDecoration = 'none';
-  step.style.color = 'blue';
-  step.style.marginLeft = '10%'
-};
+// lists.addEventListener('mouseover', displaySteps); 
+// function displaySteps(e){
+//   step.style.display = 'block';
+//   step.style.fontStyle = 'italic';
+//   step.style.fontSize = '80%';
+//   step.style.textDecoration = 'none';
+//   step.style.color = 'blue';
+//   step.style.marginLeft = '10%'
+// };
 
 // const divs = document.querySelectorAll('.sub');
 // console.log(divs);
@@ -127,5 +127,15 @@ function displaySteps(e){
 
 //     checkMe(); 
 
+const handleCheckboxChange = () => {
+    const checkboxes = document.querySelectorAll('checkbox_class');
+    const activities = document.getElementsByTagName('small')
+    checkboxes.forEach((checkbox) => {
+        if(checkbox.checked === true) {
+            return activities.classList.add('strike_through')
+        }
+    })
 
+}
     
+document.addEventListener('DOMContentLoaded', handleCheckboxChange);

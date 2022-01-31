@@ -34,3 +34,11 @@ ul li.checked {
   text-decoration: line-through;
 }
 
+.strike_through {
+  color: purple;
+  font-weight: bold
+}
+
+input[type=checkbox]:checked + .strikethrough{
+  text-decoration: line-through;
+}
