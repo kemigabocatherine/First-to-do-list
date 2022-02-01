@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header,
+.add {
+  background-color: #470606;
+}
+
+.delete,
+.add {
+  background-color: #941515;
+}
+
+.activity {
+  color: #101057;
+}
+
+.list-group-item {
+  color: rgb(66, 63, 63);
+  font-size: 20px;
+  /* display: inline;
+  align-items: baseline; */
+}
+
+#sub {
+  display: none;
+}
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+.strike_through {
+  color: purple;
+  font-weight: bold
+}
+
+input[type=checkbox]:checked + .strikethrough{
+  text-decoration: line-through;
+}
